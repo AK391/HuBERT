@@ -1,9 +1,5 @@
 import gradio as gr
-import torch
 
-# Audio
-torch.hub.download_url_to_file('https://github.com/ultralytics/yolov5/raw/master/data/images/zidane.jpg', 'zidane.jpg')
-torch.hub.download_url_to_file('https://github.com/ultralytics/yolov5/raw/master/data/images/bus.jpg', 'bus.jpg')
 
 
 description = "demo for HuBERT. To use it, simply add your audio or click one of the examples to load them. Read more at the links below."
@@ -13,6 +9,5 @@ gr.Interface.load("huggingface/facebook/hubert-large-ls960-ft",
     description=description,
     article=article,
     examples=[
-  ["./audio1.mp3"],
-  ["./audio2.mp3"]
+  ["./audio1.mp3"]
 ]).launch()
