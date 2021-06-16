@@ -9,5 +9,6 @@ gr.Interface.load("huggingface/facebook/hubert-large-ls960-ft",
     description=description,
     article=article,
     examples=[
-  ["./audio1.mp3"]
+  ["./audio1.mp3"],
+  ["./audio2.mp3"]
 ]).launch()
